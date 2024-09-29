@@ -30,6 +30,12 @@ docker run -d -p 10081:80 -p 10022:22 -p 16379:6379 redis-unauth-hub
 docker inspect redis-unauth-hub
 ```
 
+#### dockerhub拉取镜像(不推荐)
+```
+docker pull yanglisianthus/redis-unauth-hub
+
+docker run -d -p 10081:80 -p 10022:22 -p 16379:6379 redis-unauth-hub
+```
 ### 复现指南 
 > 下列复现均是在本地（Kali Linux）搭建的docker环境
 
