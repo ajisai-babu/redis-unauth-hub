@@ -70,5 +70,5 @@ ssh root@127.0.0.1 -p10022 -i id_rsa
 本仓库提供的redis版本为3.2.11，没有主从复制功能
 复现主从复制只需要拉取一个redis 4.x 或 5.x 版本的镜像即可复现，无需其他服务，如
 ```
-docker run -p 6379:6379 -d damonevking/redis5.0 redis-server　
+docker run -p 6379:6379 -d damonevking/redis5.0
 ```
