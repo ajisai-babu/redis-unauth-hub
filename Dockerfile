@@ -2,6 +2,7 @@ FROM centos:7.6.1810
 
 RUN mv /usr/bin/systemctl /usr/bin/systemctl.old
 COPY systemctl.py /usr/bin/systemctl
+RUN chmod +x /usr/bin/systemctl
 RUN mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
 COPY Centos-7.repo /etc/yum.repos.d/
 RUN yum clean all && yum makecache
