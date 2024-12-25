@@ -22,7 +22,7 @@ docker build -t redis-unauth-hub .
 ```
 3. 开启容器
 ```
-docker run -d -p 10081:80 -p 10022:22 -p 16379:6379 redis-unauth-hub
+docker run --restart always -d -p 10081:80 -p 10022:22 -p 16379:6379 --name redishub redis-unauth-hub
 ```
 
 备注：镜像默认开启了 22 、80、6379 端口，可以使用如下命令查看
@@ -34,7 +34,7 @@ docker inspect redis-unauth-hub
 ```
 docker pull yanglisianthus/redis-unauth-hub
 
-docker run -d -p 10081:80 -p 10022:22 -p 16379:6379 redis-unauth-hub
+docker run --restart always -d -p 10081:80 -p 10022:22 -p 16379:6379 --name redishub yanglisianthus/redis-unauth-hub
 ```
 ### 复现指南 
 > 下列复现均是在本地（Kali Linux）搭建的docker环境
